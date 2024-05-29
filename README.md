@@ -15,3 +15,63 @@ Je met surbrillance puis x le nombre d'occurance
 
 ## Ré indenter le code
 <kbd>Shift</kbd> +  <kbd>Alt</kbd>  +  <kbd>f</kbd>  
+
+
+# Emmet
+## Activer emmet
+file > preferences > settings 
+je tape "emmet"
+j'active trigger on tab
+
+# structure HTML
+!+ <kbd>tab</kbd>
+
+.container  
+```html 
+<div class="container"></div> 
+ ```
+.toto  
+```html 
+<div class="toto"></div> 
+``` 
+#titre
+```html   
+<div id="titre"></div>  
+```
+
+les tableaux :
+```
+table>thead>tr>th*6 
+```
+
+```
+tbody>tr*2>td*3
+````
+
+```
+table>thead>tr>th*3^^tbody>tr*2>td*3
+```
+Les tableaux
+```html
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>Brad</td>
+            <td>PITT</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Tom</td>
+            <td>Cruise</td>
+        </tr>
+    </tbody>
+</table>
+```
