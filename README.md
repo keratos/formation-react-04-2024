@@ -3,7 +3,7 @@
 ## dupliquer une ligne
 <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>fleche</kbd> (fleche haut et bas)
 
-## deplacer la ligne
+## deplacer la ligne ou un bloque
 <kbd>Alt</kbd> +  <kbd>fleche</kbd>
 
 ## Modifier plusieurs occurance
@@ -16,12 +16,17 @@ Je met surbrillance puis x le nombre d'occurance
 ## Ré indenter le code
 <kbd>Shift</kbd> +  <kbd>Alt</kbd>  +  <kbd>f</kbd>  
 
+## Rechercher dans tous les fichiers
+<kbd>Ctrl</kbd> +  <kbd>Shift</kbd>  +  <kbd>f</kbd> 
+
+# mettre en commentaires plusieurs lignes
+<kbd>Ctrl</kbd> +  <kbd>/</kbd>
 
 # Emmet
 ## Activer emmet
-file > preferences > settings 
-je tape "emmet"
-j'active trigger on tab
+file > preferences > settings  
+je tape "emmet"  
+j'active trigger on tab  
 
 # structure HTML
 !+ <kbd>tab</kbd>
