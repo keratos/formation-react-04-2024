@@ -19,7 +19,7 @@ Je met surbrillance puis x le nombre d'occurance
 ## Rechercher dans tous les fichiers
 <kbd>Ctrl</kbd> +  <kbd>Shift</kbd>  +  <kbd>f</kbd> 
 
-# mettre en commentaires plusieurs lignes
+# mettre en commentaire plusieurs lignes
 <kbd>Ctrl</kbd> +  <kbd>/</kbd>
 
 # Emmet
@@ -80,3 +80,14 @@ Les tableaux
     </tbody>
 </table>
 ```
+
+# Liens sympa
+Admin panel  
+https://themeforest.net/category/site-templates/admin-templates
+
+Maquettes bootstrap  
+https://startbootstrap.com/templates/landing-pages
+https://startbootstrap.com/template/small-business
+
+changer le themes de bootstrap  
+https://bootswatch.com/
