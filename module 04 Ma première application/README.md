@@ -73,7 +73,7 @@ return (
 ## 2 - L’action : (le bouton) gestion du "submit"
 ```tsx
 export default function App() {
-  function affiche(e: any) {
+  function affiche(e) {
     e.preventDefault();
     console.log(e.target.prenom.value + " " + e.target.nom.value);
   };
@@ -92,7 +92,7 @@ Encore mieux avec les fonctions fléchées : **arrow function**
   
 ```tsx
 export default function App() {
-  const affiche = (e: any) => {
+  const affiche = (e) => {
     e.preventDefault();
     console.log(e.target.prenom.value + " " + e.target.nom.value);
   };
@@ -115,7 +115,7 @@ import {useState} from 'react'; // 1: importer
 
 export default function App() {
   const [message,setMessage] = useState('') // 2: declarer
-  const affiche = (e: any)=> {
+  const affiche = (e)=> {
     e.preventDefault();
     const prenom = e.target.prenom.value;
     const nom = e.target.nom.value;
@@ -141,7 +141,7 @@ import "./App.css";
 import {useState} from 'react';// 1: importer
 export default function App() {
   const [message,setMessage] = useState('') // 2: declarer
-  const affiche = (e: any)=> {
+  const affiche = (e)=> {
     e.preventDefault();
     const prenom = e.target.prenom.value;
     const nom = e.target.nom.value;
@@ -181,7 +181,7 @@ import "./App.css";
 import {useState} from 'react';// 1: importer
 export default function App() {
   const [message,setMessage] = useState('') // 2: declarer
-  const affiche = (e: any)=> {
+  const affiche = (e)=> {
     e.preventDefault();
     const prenom = e.target.prenom.value;
     const nom = e.target.nom.value;
