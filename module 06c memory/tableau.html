@@ -1,0 +1,33 @@
+
+
+<script>
+    let fruits =['pomme','poire','cerise','kiwi','banane'];
+    for (let fruit of fruits){
+        console.log(fruit);
+    }
+    for (let indice in fruits){
+        console.log(indice); // indice c'est string
+    }
+    let personne = {nom:'PITT',prenom:'Brad'}
+    // un objet c'est aussi un tableau
+    console.log(personne['nom']);
+    let att = 'prenom';
+    console.log(personne[att]);
+
+    for ( let attribut in personne){
+        console.log(attribut); // prenom nom
+    }
+    // effacer cerise
+    // ne pas utiliser
+    //delete fruits[2];
+    let fruits2 =fruits.splice(2,3);
+    console.table(fruits);
+    console.log(fruits2);
+    //let tab = tab1 + tab2 ;
+    let tab = tab1.concat(tab2);
+
+
+
+
+
+</script>
