@@ -3,7 +3,7 @@
 1 - afficher une liste film en fonction du texte saisie  
 2 - Créer un component **TrSearch.jsx**  
 3 - ajouter le film a une liste de favoris  
-4 - Créer un component **TrSearch.jsx**  
+4 - Créer un component **TrFav.jsx**  
 5 - créer une fonction asynchrone pour récupérer la note du film  
 6 - persister la liste dans localStorage  
   
