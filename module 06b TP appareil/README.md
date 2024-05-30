@@ -63,3 +63,70 @@ export default function Personne(props) {
 
 ## Etape 2
 - ajouter ON et OFF pour chaque 
+**App.jsx**
+```jsx
+import {useState} from 'react';
+import Appareil from './components/Appareil'
+export default function App() {
+  const [appareils,setAppareils] = useState([
+    {nom:'TV',etat:'allume'},
+    {nom:'Xbox',etat:'eteint'},
+    {nom:'Machine à café',etat:'allume'},
+  ]);
+  const switchOne=(indice)=>{
+    // 0 == '0'  '0' ==='0' 
+    if (appareils[indice].etat === 'allume'){
+      appareils[indice].etat = 'eteint'
+    }else{
+      appareils[indice].etat = 'allume'
+    }
+    setAppareils([...appareils]);
+  }
+  const allumer=()=>{
+    appareils.map(appareil=> appareil.etat = 'allume');
+    setAppareils([...appareils]);
+  }
+  const eteindre=()=>{
+    appareils.map(appareil=> appareil.etat = 'eteint');
+    setAppareils([...appareils]);
+  }
+ 
+  return (
+    <div className="container">
+      <div className="col-4">
+      <h2>Les Appareils</h2>
+				<ul className="list-group">
+          {appareils.map((a,i)=><Appareil 
+          key={i} 
+          appareil={a} 
+          indice={i}
+          switchOne={switchOne}
+          />)}
+          </ul>
+          <button className="btn btn-success mt-4" onClick={allumer}>ON</button>
+          <button className="btn btn-danger mt-4 ms-5" onClick={eteindre}>OFF</button>
+      </div>
+    </div>
+
+  );
+}
+```
+
+**Appareil.jsx**
+```jsx
+export default function Personne({appareil,indice,switchOne}) {
+    return (
+        <li 
+        className={`list-group-item list-group-item-${appareil.etat == 'allume' ? 'success':'danger' }`}
+        >
+            <h4>  {appareil.nom} -- {appareil.etat}</h4>
+            <button className={`btn btn-${appareil.etat === 'allume' ? 'danger' :'success'}`} onClick={()=>switchOne(indice)} >
+                {appareil.etat === 'allume' ? <span>OFF</span> :<span>ON</span>} 
+                </button>
+            {/* <button className="btn btn-success " onClick={()=>switchOne(indice)} >ON</button>
+          <button className="btn btn-danger ms-3" onClick={()=>switchOne(indice)} >OFF</button> */}
+        </li>
+        
+    )
+}
+```
