@@ -1,9 +1,9 @@
 # TP 5 Liste de films favoris
   
 1 - afficher une liste film en fonction du texte saisie  
-2 - Créer un component **TrSearch.jsx**
+2 - Créer un component **TrSearch.jsx**  
 3 - ajouter le film a une liste de favoris  
-4 - Créer un component **TrSearch.jsx**
+4 - Créer un component **TrSearch.jsx**  
 5 - créer une fonction asynchrone pour récupérer la note du film  
 6 - persister la liste dans localStorage  
   
