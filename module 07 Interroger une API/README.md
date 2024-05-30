@@ -5,7 +5,7 @@
 ```tsx
 import { useState } from "react";
 export default function App() {
-    const [data,setData] = useState<any>({})
+    const [data,setData] = useState({})
     const getData= async () => {
       const response =  await fetch ('https://swapi.dev/api/people/1');
       const data = await response.json();
@@ -15,12 +15,38 @@ export default function App() {
    return (
     <>
     <button onClick={getData}>GET DATA</button>
-    <br />{  data.name ?? <h2>{data.name}</h2>  } 
+    <br />{  data.name && <h2>{data.name}</h2>  } 
     </>
   )
 }
 
 ```
+
+```jsx
+import { useState } from "react";
+export default function App() {
+    const [data,setData] = useState({})
+    const getData= async () => {
+      let key = 'efdc2275';
+      // &t= 1seul film
+      //  &s= 1 tableau de films
+      let titre= 'harry';
+      let url =`http://www.omdbapi.com/?apikey=${key}&s=${titre}`
+      const response =  await fetch (url);
+      const data = await response.json();
+      console.log(data);
+      setData(data);
+    }
+   return (
+    <>
+    <button onClick={getData}>GET DATA</button>
+    {/* <br />{  data.Title && <h2><img src={data.Poster} /></h2>  }  */}
+    { data && data.Search.map(film => <img src={film.Poster} width="80" />)}
+    </>
+  )
+}
+```
+
 ![axios](../img/07/axios.png)
 ## mise en place de axios
 
@@ -32,7 +58,7 @@ npm i axios
 import { useState } from "react";
 import axios from 'axios';
 export default function App() {
-    const [data,setData] = useState<any>({})
+    const [data,setData] = useState({})
     const getData= async () => {
       const response =  await axios.get('https://swapi.dev/api/people/1');
       setData(response.data);
@@ -40,7 +66,7 @@ export default function App() {
    return (
     <>
     <button onClick={getData}>GET DATA</button>
-    <br />{  data.name ?? <h2>{data.name}</h2>  } 
+    <br />{  data.name && <h2>{data.name}</h2>  } 
     </>
   )
 }
@@ -54,7 +80,7 @@ https://www.omdbapi.com/
 import { useState } from "react";
 import axios from 'axios';
 export default function App() {
-    const [data,setData] = useState<any>({})
+    const [data,setData] = useState({})
     const getData= async () => {
       let key = 'xxx2275';
       let url =`http://www.omdbapi.com/?apikey=${key}&t=star`
