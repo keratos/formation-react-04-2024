@@ -110,3 +110,67 @@ export default function Personne({prenom,nom,indice,qui}) {
     )
 }
 ```
+
+## Etape 5 props et fonctions
+
+**App.jsx**
+```jsx
+import {useState} from 'react';
+import Personne from './components/Personne'
+export default function App() {
+  const [personnes,setPersonnes] = useState([
+    {nom:'PITT',prenom:'Brad'},
+    {nom:'CRUISE',prenom:'Tom'},
+    {nom:'JOLIE',prenom:'Angelina'},
+  ]);
+  const enlever=(indice)=>{
+    personnes.splice(indice,1);
+    setPersonnes([...personnes]);
+  }
+  return (
+    <div className="container">
+      <div className="col-4">
+      <h2>Les personnes</h2>
+				{personnes.map(
+          (personne,indice)=><Personne 
+          key={indice} 
+          personne={personne} 
+          indice={indice} 
+          enlever={enlever}
+          />)}
+      </div>
+    </div>
+
+  );
+}
+```
+
+**Personne.jsx**
+```jsx
+export default function Personne(props) {
+    return (
+       <p>
+        {props.personne.prenom}
+        {props.personne.nom}
+        <button className="btn btn-danger" 
+        onClick={()=>props.enlever(props.indice)}>OFF</button>
+       </p>
+        
+    )
+}
+```
+
+**Personne.jsx**
+```jsx
+export default function Personne({personne,indice,enlever}) {
+    return (
+       <p>
+        {personne.prenom}
+        {personne.nom}
+        <button className="btn btn-danger" 
+        onClick={()=>enlever(indice)}>OFF</button>
+       </p>
+        
+    )
+}
+```
