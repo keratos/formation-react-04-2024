@@ -19,6 +19,22 @@ function App() {
     let url =`${urlFire}personne.json`; // a modifier
     const response = await axios.get<any>(url);
     console.log(response.data);
+    
+    //-------------------------------------------
+    let objet =response.data;
+    // let attribut
+    let personnes = [];
+    for (let attribut in objet){
+      console.log(attribut);
+      let id = attribut
+      // un objet est aussi un tableau (array)
+      let personne = objet[id];
+      personne.id = attribut;
+      personnes.push(personne);
+      console.log(personne);
+    }
+    console.log(personnes);
+    //-------------------------------------------
   }
   const modifier = async()=>{
     let id = '-NyVqQdJrKVpXHF6PPUU'; // a modifier
@@ -26,6 +42,8 @@ function App() {
     let url =`${urlFire}personne/${id}.json`;
     const response = await axios.patch<any>(url,obj);
     console.log(response.data);
+
+    
   }
   const effacer = async()=>{
     let id = '-NyVqQdJrKVpXHF6PPUU'; // a modifier
