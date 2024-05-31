@@ -1,0 +1,14 @@
+{
+    "id1" :{"nom": "PITT", "prenom": "Brad"},
+    "id2" :{"nom": "CAGE", "prenom": "Nicolas"},
+    "id3" :{"nom": "JOLIE", "prenom": "Angelina"}
+}
+
+[
+    {"id":"id1", "nom": "PITT", "prenom": "Brad"},
+    {"id":"id2", "nom": "CAGE", "prenom": "Nicolas"},
+    {"id":"id3", "nom": "JOLIE", "prenom": "Angelina"}
+]
+
+
+
